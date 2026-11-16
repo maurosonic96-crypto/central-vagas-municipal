@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#142743">
+<meta name="description" content="Protótipo demonstrativo da Central Municipal de Vagas. Não realiza inscrição oficial.">
+<title>Central de Vagas Municipal</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="Central de Vagas, início" data-page="inicio">
+    <span class="brand-mark">⌂</span><span>Central de Vagas<small>Atendimento municipal</small></span>
+  </a>
+  <div class="top-right"><span class="top-label">Portal de demonstração</span><span class="demo-pill">● Ambiente de teste</span></div>
+</header>
+<div class="shell">
+  <aside class="sidebar" aria-label="Navegação principal">
+    <div class="side-label">Menu principal</div>
+    <nav class="nav">
+      <button class="active" data-page="inicio"><span class="ico">⌂</span>Início</button>
+      <button data-page="inscricao"><span class="ico">✎</span>Inscrição</button>
+      <button data-page="unidades"><span class="ico">⌖</span>Unidades</button>
+      <button data-page="acompanhamento"><span class="ico">◷</span>Acompanhar</button>
+      <button data-page="prioridade"><span class="ico">◎</span>Critérios</button>
+      <button data-page="ajuda"><span class="ico">✆</span>Ajuda</button>
+    </nav>
+    <div class="sidebar-bottom">Central de Vagas Municipal<br><span>Protótipo acadêmico • 2026</span></div>
+  </aside>
+  <main id="conteudo">
+    <div class="notice" role="note"><span class="nicon">ⓘ</span><div><strong>Você está em um ambiente demonstrativo.</strong> Nenhuma inscrição será enviada à Prefeitura. Use somente informações fictícias. Os protocolos, unidades, critérios e atualizações desta demonstração não têm validade oficial.</div></div>
+
+    <section class="page active" id="page-inicio">
+      <div class="hero"><div class="hero-content">
+        <span class="tag">SERVIÇOS • EDUCAÇÃO INFANTIL</span>
+        <h1>O caminho para uma vaga começa com informação.</h1>
+        <p>Consulte unidades, conheça as etapas e acompanhe uma solicitação de forma simples e transparente.</p>
+        <div class="hero-actions"><button class="btn btn-light" data-page="inscricao">Iniciar inscrição demonstrativa <span>→</span></button><button class="btn btn-ghost" data-page="acompanhamento">Acompanhar protocolo</button></div>
+      </div></div>
+      <div class="grid grid-3">
+        <article class="card quick-card" data-page="inscricao"><div class="stat-icon">✎</div><h3>Solicitar vaga</h3><p>Preencha um cadastro de exemplo com dados fictícios.</p><span class="arrow">Acessar inscrição →</span></article>
+        <article class="card quick-card" data-page="unidades"><div class="stat-icon">⌖</div><h3>Conhecer unidades</h3><p>Veja opções demonstrativas e escolha uma unidade.</p><span class="arrow">Ver unidades →</span></article>
+        <article class="card quick-card" data-page="acompanhamento"><div class="stat-icon">◷</div><h3>Acompanhar pedido</h3><p>Consulte um protocolo e entenda o status apresentado.</p><span class="arrow">Consultar protocolo →</span></article>
+      </div>
+      <div class="section-title"><h2>Como funciona o processo</h2><button class="text-link" data-page="prioridade">Ver critérios de exemplo →</button></div>
+      <div class="card"><div class="steps">
+        <div class="step"><span class="step-num">1</span><div><b>Faça a solicitação</b><span>Informe os dados necessários no cadastro.</span></div></div>
+        <div class="step"><span class="step-num">2</span><div><b>Acompanhe a análise</b><span>Consulte o andamento pelo protocolo.</span></div></div>
+        <div class="step"><span class="step-num">3</span><div><b>Receba orientações</b><span>Veja os canais de atendimento e atualização.</span></div></div>
+      </div></div>
+      <div class="footer"><span>Protótipo de avaliação de usabilidade.</span><span>Não substitui os canais oficiais do município.</span></div>
+    </section>
+
+    <section class="page" id="page-inscricao">
+      <div class="page-head"><div><p class="eyebrow">SOLICITAÇÃO</p><h1>Inscrição demonstrativa</h1><p>Preencha os campos com dados inventados. Não informe CPF, endereço, telefone ou qualquer dado verdadeiro.</p></div><span class="head-badge">Etapa de cadastro</span></div>
+      <div class="card form-card">
+        <h2>Dados de exemplo</h2><p class="muted" style="font-size:12px;margin:0 0 20px">Os campos com * são obrigatórios para concluir esta simulação.</p>
+        <form id="form-inscricao" novalidate>
+          <div class="form-grid">
+            <div class="field" id="f-responsavel"><label for="responsavel">Nome fictício do responsável *</label><input id="responsavel" name="responsavel" placeholder="Ex.: Ana Exemplo" autocomplete="off" required><small>Use um nome inventado.</small><span class="error">Preencha com um nome fictício.</span></div>
+            <div class="field" id="f-crianca"><label for="crianca">Nome fictício da criança *</label><input id="crianca" name="crianca" placeholder="Ex.: Bia Exemplo" autocomplete="off" required><small>Não utilize nome de uma criança real.</small><span class="error">Preencha com um nome fictício.</span></div>
+            <div class="field" id="f-faixa"><label for="faixa">Faixa etária *</label><select id="faixa" required><option value="">Selecione</option><option>Berçário</option><option>Maternal I</option><option>Maternal II</option><option>Pré-escola</option></select><span class="error">Selecione uma faixa etária.</span></div>
+            <div class="field" id="f-turno"><label for="turno">Período pretendido *</label><select id="turno" required><option value="">Selecione</option><option>Manhã</option><option>Tarde</option><option>Integral</option></select><span class="error">Selecione um período.</span></div>
+            <div class="field full"><label for="unidade-escolhida">Unidade selecionada</label><input id="unidade-escolhida" value="Nenhuma unidade selecionada" readonly><small>Escolha uma opção na seção “Unidades”.</small></div>
+          </div>
+          <label class="checkline"><input type="checkbox" id="dados-ficticios"><span>Confirmo que estou utilizando somente dados fictícios e compreendo que esta simulação não gera uma inscrição oficial.</span></label>
+          <div class="error" id="erro-check" style="margin-top:8px">Confirme o uso de dados fictícios para continuar.</div>
+          <div class="form-actions"><button class="btn btn-primary" type="submit">Gerar protocolo demonstrativo →</button><button class="btn btn-outline" type="reset">Limpar campos</button></div>
+        </form>
+        <div class="result" id="resultado-inscricao" hidden aria-live="polite"><h3>✓ Simulação concluída</h3><p style="font-size:13px;color:#456">O protocolo abaixo foi criado apenas neste navegador. Nenhuma solicitação foi enviada.</p><div class="protocol" id="novo-protocolo"></div><button class="btn btn-outline btn-small" id="ver-novo-protocolo" style="margin-top:10px">Consultar este protocolo</button></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-unidades">
+      <div class="page-head"><div><p class="eyebrow">REDE DE ATENDIMENTO</p><h1>Conheça as unidades</h1><p>Consulte as opções ilustrativas e selecione uma unidade para sua inscrição demonstrativa.</p></div><span class="head-badge">Dados fictícios</span></div>
+      <div class="unit-grid" id="lista-unidades">
+        <article class="unit-card"><div class="unit-top"><span class="unit-icon">🏫</span><span class="available">Disponível na simulação</span></div><div><h3>EMEI Jardim das Flores</h3><p>Região central • Atendimento de educação infantil</p></div><div class="unit-meta"><span>Berçário e Maternal</span><span>Manhã / Tarde</span></div><button class="btn btn-primary btn-small" data-unit="EMEI Jardim das Flores">Selecionar unidade</button></article>
+        <article class="unit-card"><div class="unit-top"><span class="unit-icon">🏫</span><span class="available">Disponível na simulação</span></div><div><h3>CEI Pequeno Horizonte</h3><p>Região norte • Atendimento de educação infantil</p></div><div class="unit-meta"><span>Maternal I e II</span><span>Integral</span></div><button class="btn btn-primary btn-small" data-unit="CEI Pequeno Horizonte">Selecionar unidade</button></article>
+        <article class="unit-card"><div class="unit-top"><span class="unit-icon">🏫</span><span class="available">Disponível na simulação</span></div><div><h3>EMEI Caminhos do Saber</h3><p>Região sul • Atendimento de educação infantil</p></div><div class="unit-meta"><span>Pré-escola</span><span>Manhã / Tarde</span></div><button class="btn btn-primary btn-small" data-unit="EMEI Caminhos do Saber">Selecionar unidade</button></article>
+        <article class="unit-card"><div class="unit-top"><span class="unit-icon">🏫</span><span class="available">Disponível na simulação</span></div><div><h3>CEI Sementes do Amanhã</h3><p>Região leste • Atendimento de educação infantil</p></div><div class="unit-meta"><span>Berçário e Maternal</span><span>Manhã / Integral</span></div><button class="btn btn-primary btn-small" data-unit="CEI Sementes do Amanhã">Selecionar unidade</button></article>
+      </div>
+      <div class="result" id="unidade-confirmada" hidden aria-live="polite"><h3>✓ Unidade selecionada para a simulação</h3><p id="unidade-confirmada-nome" style="font-size:13px;color:#456"></p><button class="btn btn-outline btn-small" data-page="inscricao" style="margin-top:10px">Continuar inscrição</button></div>
+      <div class="disclaimer">As unidades e indicações de disponibilidade são ilustrativas. Não representam a rede municipal real nem a existência de vagas.</div>
+    </section>
+
+    <section class="page" id="page-acompanhamento">
+      <div class="page-head"><div><p class="eyebrow">CONSULTA</p><h1>Acompanhe sua solicitação</h1><p>Consulte o andamento usando um protocolo demonstrativo. Um exemplo já está preenchido para facilitar a exploração.</p></div><span class="head-badge">Consulta de exemplo</span></div>
+      <div class="card form-card">
+        <form id="form-consulta"><div class="form-grid"><div class="field full"><label for="protocolo">Número do protocolo</label><input id="protocolo" value="CV-2026-0042" autocomplete="off" placeholder="Ex.: CV-2026-0042"></div></div><div class="form-actions"><button class="btn btn-primary" type="submit">Consultar andamento →</button><button class="btn btn-outline" type="button" id="usar-exemplo">Usar protocolo de exemplo</button></div></form>
+        <div id="resultado-consulta" style="margin-top:20px" aria-live="polite">
+          <div class="result"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap"><div><div class="eyebrow" style="margin:0 0 4px">PROTOCOLO CONSULTADO</div><div class="protocol">CV-2026-0042</div></div><span class="status">Em análise</span></div><p style="font-size:13px;color:#52657b;margin-top:10px">Solicitação demonstrativa recebida e aguardando conferência de informações.</p>
+          <div class="grid grid-2" style="margin-top:15px"><div><small class="muted">Unidade de referência</small><b style="display:block;color:var(--navy);font-size:13px">EMEI Jardim das Flores</b></div><div><small class="muted">Última atualização</small><b style="display:block;color:var(--navy);font-size:13px">10/11/2026 • 14h30</b></div></div></div>
+          <div class="timeline">
+            <div class="timeline-item done"><span class="dot">✓</span><div><b>Solicitação registrada</b><small>10/11/2026 • Protocolo de exemplo criado.</small></div></div>
+            <div class="timeline-item done"><span class="dot">✓</span><div><b>Documentação recebida</b><small>10/11/2026 • Etapa ilustrativa concluída.</small></div></div>
+            <div class="timeline-item"><span class="dot">3</span><div><b>Em análise</b><small>Etapa atual do exemplo. Aguardando conferência.</small></div></div>
+            <div class="timeline-item"><span class="dot">4</span><div><b>Resultado da solicitação</b><small>Ainda não há resultado neste protocolo demonstrativo.</small></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="disclaimer">Este acompanhamento é uma simulação local. O status não consulta sistemas da Prefeitura e não representa uma fila real.</div>
+    </section>
+
+    <section class="page" id="page-prioridade">
+      <div class="page-head"><div><p class="eyebrow">INFORMAÇÃO AO CIDADÃO</p><h1>Critérios de priorização</h1><p>Veja exemplos de situações que podem ser consideradas em políticas públicas de organização de vagas.</p></div><span class="head-badge">Conteúdo ilustrativo</span></div>
+      <div class="criteria">
+        <article class="criterion"><span class="cicon">♿</span><div><b>Criança com deficiência</b><p>Necessidades de acessibilidade e atendimento especializado podem ser consideradas conforme as regras aplicáveis.</p></div></article>
+        <article class="criterion"><span class="cicon">♡</span><div><b>Situação de vulnerabilidade social</b><p>Condições sociais e familiares podem ser analisadas por critérios definidos pelo município.</p></div></article>
+        <article class="criterion"><span class="cicon">👪</span><div><b>Responsável trabalhador</b><p>A necessidade de conciliar jornada de trabalho e cuidado pode integrar a análise, conforme regulamentação local.</p></div></article>
+        <article class="criterion"><span class="cicon">⌂</span><div><b>Proximidade da residência</b><p>A região de moradia pode ser um dos fatores de organização e encaminhamento das solicitações.</p></div></article>
+      </div>
+      <div class="disclaimer"><strong>Atenção:</strong> estes itens são exemplos criados para avaliação do protótipo. Não constituem critérios oficiais, não indicam pontuação, ordem de classificação ou garantia de vaga. Consulte sempre a regulamentação e os canais oficiais do município.</div>
+    </section>
+
+    <section class="page" id="page-ajuda">
+      <div class="page-head"><div><p class="eyebrow">CANAIS DE ATENDIMENTO</p><h1>Ajuda e orientações</h1><p>Entenda como um canal de mensagens poderia apoiar a comunicação com as famílias.</p></div><span class="head-badge">Simulação de atendimento</span></div>
+      <div class="grid grid-2">
+        <div class="card"><h2>Atualizações pelo WhatsApp</h2><p style="font-size:13px;margin-bottom:16px">Em um serviço real, a família poderia receber avisos sobre mudanças no andamento da solicitação pelo número oficial divulgado pela Prefeitura.</p>
+          <div class="help-row"><span class="help-ico">🔔</span><div><b>Aviso de mudança de status</b><p>Uma mensagem poderia informar quando a solicitação passasse para outra etapa.</p></div></div>
+          <div class="help-row"><span class="help-ico">📄</span><div><b>Orientação sobre pendências</b><p>O canal poderia indicar quando fosse necessário consultar informações ou apresentar documentos.</p></div></div>
+          <div class="help-row"><span class="help-ico">📅</span><div><b>Comunicados importantes</b><p>A família poderia receber instruções sobre prazos, atendimento e próximos passos.</p></div></div>
+        </div>
+        <div class="card"><h2>Exemplo de mensagem</h2><p style="font-size:12px">Abaixo está um texto fictício para ilustrar como seria uma atualização. Nenhuma mensagem será enviada.</p>
+          <div class="sample-msg" id="mensagem-exemplo">CENTRAL DE VAGAS — MENSAGEM DEMONSTRATIVA
+
+Olá! Há uma atualização no protocolo CV-2026-0042.
+
+Status: Em análise.
+Próximo passo: aguardar a conferência das informações.
+
+Esta é uma mensagem fictícia. Consulte os canais oficiais do município para orientações válidas.</div>
+          <button class="btn btn-outline btn-small" id="copiar-mensagem">Copiar exemplo de mensagem</button>
+          <div class="disclaimer" style="margin-top:16px">O protótipo não está conectado ao WhatsApp e não envia notificações reais. Não responda nem compartilhe dados pessoais com números não verificados.</div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px"><h2>Como identificar um canal oficial?</h2><p style="font-size:13px;margin-top:7px">Confira o número ou link diretamente no site e nos comunicados oficiais da Prefeitura. Desconfie de pedidos de pagamento, senhas, códigos de verificação ou documentos enviados por contatos desconhecidos.</p></div>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
